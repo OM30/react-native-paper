@@ -23,7 +23,6 @@ export type RenderProps = {
   numberOfLines?: number;
   value?: string;
   adjustsFontSizeToFit?: boolean;
-  isRequires?: boolean;
 };
 type TextInputTypesWithoutMode = $Omit<TextInputProps, 'mode'>;
 export type State = {
