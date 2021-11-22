@@ -9,6 +9,7 @@ const InputLabel = (props: InputLabelProps) => {
 
   const {
     label,
+    isRequired,
     error,
     onLayoutAnimatedText,
     hasActiveOutline,
@@ -113,7 +114,7 @@ const InputLabel = (props: InputLabelProps) => {
         ]}
         numberOfLines={1}
       >
-        {label}
+        {label} {isRequired ? (<AnimatedText style={{color:'red'}}>*</AnimatedText>) : null }
       </AnimatedText>
       <AnimatedText
         style={[
@@ -130,7 +131,7 @@ const InputLabel = (props: InputLabelProps) => {
         ]}
         numberOfLines={1}
       >
-        {label}
+        {label} {isRequired ? (<AnimatedText style={{color:'red'}}>*</AnimatedText>) : null }
       </AnimatedText>
     </Animated.View>
   ) : null;

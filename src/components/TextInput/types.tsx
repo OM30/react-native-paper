@@ -63,6 +63,7 @@ export type LabelProps = {
   placeholderColor: string | null;
   backgroundColor?: ColorValue;
   label?: string | null;
+  isRequired?: boolean | null;
   hasActiveOutline?: boolean | null;
   activeColor: string;
   errorColor?: string;
