@@ -43,6 +43,10 @@ export type TextInputProps = React.ComponentPropsWithRef<
   /**
    * Placeholder for the input.
    */
+  isRequired?: boolean;
+  /**
+   * Mandatory flag for the input.
+   */
   placeholder?: string;
   /**
    * Whether to style the TextInput with error style.
@@ -223,6 +227,7 @@ class TextInput extends React.Component<TextInputProps, State> {
     const isLabelLayoutChanged =
       prevState.labelLayout !== this.state.labelLayout;
     const isLabelChanged = prevProps.label !== this.props.label;
+    const isRequiredChanged = prevProps.isRequired !== this.props.isRequired;
     const isErrorChanged = prevProps.error !== this.props.error;
 
     if (
@@ -467,6 +472,7 @@ class TextInput extends React.Component<TextInputProps, State> {
         {...rest}
         value={this.state.value}
         parentState={this.state}
+        isRequired={this.props.isRequired}
         innerRef={(ref) => {
           this.root = ref;
         }}

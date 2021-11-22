@@ -16,6 +16,7 @@ type PaddingProps = {
   topPosition: number;
   fontSize: number;
   label?: string | null;
+  isRequired?: boolean | null;
   scale: number;
   offset: number;
   isAndroid: boolean;

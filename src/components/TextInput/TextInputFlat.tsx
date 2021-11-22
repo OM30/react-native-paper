@@ -61,6 +61,7 @@ class TextInputFlat extends React.Component<ChildTextInputProps> {
       disabled,
       editable,
       label,
+      isRequired,
       error,
       selectionColor,
       underlineColor,
@@ -260,6 +261,7 @@ class TextInputFlat extends React.Component<ChildTextInputProps> {
 
     const labelProps = {
       label,
+      isRequired,
       onLayoutAnimatedText,
       placeholderOpacity,
       error,
@@ -330,6 +332,7 @@ class TextInputFlat extends React.Component<ChildTextInputProps> {
             ...rest,
             ref: innerRef,
             onChangeText,
+            isRequired: isRequired,
             placeholder: label
               ? parentState.placeholder
               : this.props.placeholder,
