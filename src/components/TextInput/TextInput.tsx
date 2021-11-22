@@ -227,7 +227,6 @@ class TextInput extends React.Component<TextInputProps, State> {
     const isLabelLayoutChanged =
       prevState.labelLayout !== this.state.labelLayout;
     const isLabelChanged = prevProps.label !== this.props.label;
-    const isRequiredChanged = prevProps.isRequired !== this.props.isRequired;
     const isErrorChanged = prevProps.error !== this.props.error;
 
     if (
