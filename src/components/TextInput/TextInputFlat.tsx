@@ -332,7 +332,6 @@ class TextInputFlat extends React.Component<ChildTextInputProps> {
             ...rest,
             ref: innerRef,
             onChangeText,
-            isRequired: isRequired,
             placeholder: label
               ? parentState.placeholder
               : this.props.placeholder,
